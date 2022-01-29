@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    /* font sizes */
+    --h2: 1.1rem;
+}
+
+/* reset default values */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    list-style-type: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    background: var(--light-gray);
+    min-height: 100vh;
+}
+
+
+/* general classes */ 
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribeButton .btn {
+    text-decoration: none;
+    background: var(--bright-yellow);
+    padding: 10px 15px;
+    width: 95%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+    margin: 15px auto;
+}
+
+/* main styles */ 
+.component {
+    width: 80%;
+    margin: 20px;
+    box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: clamp(255px, 80%, 650px);
+}
+
+#join-content {
+    padding: 15px;
+    padding-bottom: 30px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+#join-content h1 {
+    color: var(--cyan);
+}
+
+#join-content h2 {
+    font-size: var(--h2);
+    margin: 20px 0;
+    color: var(--bright-yellow);
+}
+
+#join-content p {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+}
+
+.subscribe-content {
+    background: var(--cyan);
+    padding: 15px;
+    color: #fff;
+}
+
+.subscribe-content h1 {
+    font-size: var(--h2);
+    font-weight: 400;
+}
+
+.price-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.price-group h2 {
+    font-size: 1.8rem;
+}
+
+.subscribeButton {
+    width: clamp(225px, 100%, 300px);
+    color:var(--bright-yellow);
+}
+
+.why-us-content {
+    background: hsl(179, 60%, 40%);
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.why-us-content h1 {
+    font-size: var(--h2);
+    margin-bottom: 20px;
+}
+
+#why-us-list li{
+    font-size: .95rem;
+    margin: 2px;
+}
+
+@media screen and (min-width: 600px){
+    .component {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #join {
+        grid-column: 1 / -1;
+    }
+
+    .subscribe-content {
+        height: 100%;
+        border-radius: 0 0 0 10px;
+    }
+
+    .why-us-content {
+        border-radius: 0 0 10px 0;
+    }
+}
